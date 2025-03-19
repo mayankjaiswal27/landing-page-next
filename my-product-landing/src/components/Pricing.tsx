@@ -1,4 +1,4 @@
-'use client' // Add this since we're using client-side state
+'use client' 
 
 import { useState } from 'react'
 
