@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import { Mail, Phone } from 'lucide-react';
 
 export function Footer() {
   const [currentTime, setCurrentTime] = useState<Date | null>(null)
@@ -22,7 +23,7 @@ export function Footer() {
     minute: '2-digit',
     second: '2-digit',
     hour12: true,
-  }) || 'Loading...' // Fallback until time is set
+  }) || 'Loading...'
 
   return (
     <footer className="bg-gradient-to-r from-gray-900 to-indigo-900 text-white py-12">
@@ -30,7 +31,7 @@ export function Footer() {
         <div className="grid md:grid-cols-4 gap-8">
           <div>
             <h3 className="text-xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">
-              ProductCo
+              Productify
             </h3>
             <p className="text-gray-400">Empowering your success</p>
           </div>
@@ -60,8 +61,17 @@ export function Footer() {
           </div>
           <div>
             <h3 className="text-lg font-semibold mb-4">Connect</h3>
-            <p className="text-gray-400 mb-2">hello@productco.com</p>
-            <p className="text-gray-400 mb-4">+1 (555) 123-4567</p>
+
+            <div className="flex items-center text-gray-400 mb-2">
+              <Mail className="w-5 h-5 mr-2 text-blue-400" />
+              <p>mayankjaiswal0104@gmail.com</p>
+            </div>
+
+            <div className="flex items-center text-gray-400 mb-4">
+              <Phone className="w-5 h-5 mr-2 text-blue-400" />
+              <p>+917588094975</p>
+            </div>
+
             <div className="bg-gray-800/50 rounded-lg p-3 inline-block">
               <span className="text-sm font-medium text-gray-400">Current Time:</span>
               <span className="ml-2 text-lg font-mono text-blue-300">

@@ -1,3 +1,4 @@
+import Image from 'next/image'
 export function Hero() {
   return (
     <section className="pt-20 pb-32 bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600 text-white overflow-hidden">
@@ -18,7 +19,13 @@ export function Hero() {
             <div className="absolute inset-0 bg-blue-400/20 rounded-full blur-3xl animate-pulse"></div>
             <div className="relative bg-white p-4 rounded-2xl shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-300">
               <div className="h-64 bg-gray-100 rounded-xl">
-
+              <Image
+        src="/demo-image-1.jpg"
+        alt="Demo Photo"
+        layout="fill"
+        objectFit="cover"
+        className="rounded-xl"
+      />
               </div>
             </div>
           </div>
